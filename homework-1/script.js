@@ -17,38 +17,31 @@ console.log(Math.trunc(bread)+Math.trunc(meat)+Math.trunc(fish));
 
 
 // Виведіть суму товарів округлену до сотень. (Наприклад якщо вийшло 260, то виведіть 300)
-console.log((Math.ceil(Math.round(bread/10)*10))+(Math.ceil(Math.round(meat)/10)*10)+(Math.ceil(Math.ceil((fish)/10)*10)))
-// console.log(Math.ceil(Math.round(bread/10)*10));
-// console.log(Math.ceil(Math.round(meat)/10)*10);
-// console.log(Math.ceil(Math.ceil((fish)/10)*10));
+console.log(Math.round(products/100)*100)
 
 
 // Виведіть булеве значення: чи є сума всіх товарів (округлена в меншу сторону) парним чи непарним числом?
-let productsFloor = Math.floor(bread+meat+fish);
-console.log(productsFloor);
-// if (products/2 ==0 )
-
-
-
-
-
-
-
-
+let productsFloor = Math.floor(products);
+let value = productsFloor%2===0;
+console.log(value);
 
 
 // Виведіть суму решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн.
-console.log(500-(bread+meat+fish));
+let cash = 500;
+console.log(cash-products);
 
 // Виведіть середнє значення цін, округлене до другого знаку після коми
-console.log(((bread+meat+fish)/3).toFixed(2))
+console.log(((products)/3).toFixed(2))
 
-// (Більш складне) 
-let randomDiscount = Math.random();
+// (Більш складне): 
+
+//Рандомна знижка
+let randomDiscount = Math.round(Math.random()*100) ;
 console.log(randomDiscount);
 
-let discount = (products-(products*randomDiscount)).toFixed(2);
-console.log(discount);
+// сума до оплати зі знижкою
+let priceWithDiscount = (products-(products*(randomDiscount/100))).toFixed(2);
+console.log(priceWithDiscount);
 
-let profit = (discount-(products/2)).toFixed(2);
+let profit = (priceWithDiscount-(products/2)).toFixed(2);
 console.log(profit);
