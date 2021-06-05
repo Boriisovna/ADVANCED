@@ -36,7 +36,7 @@ const changes = (cash-products);
 console.log(changes);
 
 // Виведіть середнє значення цін, округлене до другого знаку після коми
-const averagePrice = ((products)/3).toFixed(2);
+const averagePrice = +((products)/3).toFixed(2);
 console.log(averagePrice)
 
 // (Більш складне): 
@@ -46,10 +46,10 @@ const randomDiscount = Math.round(Math.random()*100) ;
 console.log(randomDiscount);
 
 // сума до оплати зі знижкою
-const priceWithDiscount = (products-(products*(randomDiscount/100))).toFixed(2);
+const priceWithDiscount = +(products-(products*(randomDiscount/100))).toFixed(2);
 console.log(priceWithDiscount);
 
-const profit = (priceWithDiscount-(products/2)).toFixed(2);
+const profit = +(priceWithDiscount-(products/2)).toFixed(2);
 console.log(profit);
 
 document.writeln(
