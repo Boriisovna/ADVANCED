@@ -1,5 +1,5 @@
 // Отримайте у користувача число(N) від якого ми будемо складати. 
-let firstNumber = +prompt("Hi! Enter the first (integer) number, please",0);
+const firstNumber = +prompt("Hi! Enter the first (integer) number, please",0);
 
 // Перевірте, чи є передане значення N числове значення || ЦІЛИМ числом.
 while(isNaN(firstNumber) || !Number.isInteger(firstNumber) ){
@@ -7,7 +7,7 @@ while(isNaN(firstNumber) || !Number.isInteger(firstNumber) ){
 }
 
 // Отримайте у користувача число(M) до якого ми будемо складати (включно).
-let secondNumber = +prompt("Hi! Enter the second (integer) number, please",0);
+const secondNumber = +prompt("Hi! Enter the second (integer) number, please",0);
 
 // Перевірте, чи є передане значення M числове значення || ЦІЛИМ числом.
 while(isNaN(secondNumber) || !Number.isInteger(secondNumber) ){
@@ -16,7 +16,7 @@ while(isNaN(secondNumber) || !Number.isInteger(secondNumber) ){
 
  // Отримайте у користувача булевий параметр(true/false), 
  // який підкаже нам чи потрібно пропускати парні числа. 
- let skipEven = confirm("Do you want to skip even numbers?");
+ const skipEven = confirm("Do you want to skip even numbers?");
 
 // Напишіть цикл, який буде складати числа від раніше отриманих N и M
 // В циклі додайте перевірку – чи потрібно пропускати при складанні парні числа. 
