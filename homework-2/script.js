@@ -1,5 +1,5 @@
 // Отримайте у користувача число(N) від якого ми будемо складати. 
-const firstNumber = +prompt("Hi! Enter the first (integer) number, please",0);
+let firstNumber = +prompt("Hi! Enter the first (integer) number, please",0);
 
 // Перевірте, чи є передане значення N числове значення || ЦІЛИМ числом.
 while(isNaN(firstNumber) || !Number.isInteger(firstNumber) ){
@@ -7,7 +7,7 @@ while(isNaN(firstNumber) || !Number.isInteger(firstNumber) ){
 }
 
 // Отримайте у користувача число(M) до якого ми будемо складати (включно).
-const secondNumber = +prompt("Hi! Enter the second (integer) number, please",0);
+let secondNumber = +prompt("Enter the second (integer) number, please",0);
 
 // Перевірте, чи є передане значення M числове значення || ЦІЛИМ числом.
 while(isNaN(secondNumber) || !Number.isInteger(secondNumber) ){
