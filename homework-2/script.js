@@ -16,14 +16,14 @@ while(isNaN(secondNumber) || !Number.isInteger(secondNumber) ){
 
  // Отримайте у користувача булевий параметр(true/false), 
  // який підкаже нам чи потрібно пропускати парні числа. 
- const skipEven = confirm("Do you want to skip even numbers?");
+ let skipEven = confirm("Do you want to skip even numbers?");
 
 // Напишіть цикл, який буде складати числа від раніше отриманих N и M
 // В циклі додайте перевірку – чи потрібно пропускати при складанні парні числа. 
 // (Використовуйте для цього if/else). Якщо парні числа потрібно пропускати не додавайте їх до суми.
 
-let minNumber = Math.min(firstNumber,secondNumber);
-let maxNumber = Math.max(firstNumber,secondNumber);
+const minNumber = Math.min(firstNumber,secondNumber);
+const maxNumber = Math.max(firstNumber,secondNumber);
 let sum = 0;
 
 for (minNumber; minNumber<=maxNumber; minNumber++) {
