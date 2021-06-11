@@ -1,101 +1,146 @@
+// ------Function №1------
 // Створити функцію getMaxDigit(number) – яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. Приклади: 1236 -> 6, 987 -> 9, 385 -> 8
 
 function getMaxDigit(number){
 return Math.max(...number.toString().split('').map(Number))
 }
-
-console.log(getMaxDigit(105876));
-document.writeln( `Your first number is : ${getMaxDigit}` )
+// console.log(getMaxDigit(105876));
 
 
-
+// ------Function №2------
 // Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 
-// function numberToThePow(x,y) {
-//     let result = x;
-//     if (x == 0) result = 1;
-//     else{
-//         for (let i = 1; i < y; i++) {
-//         result *= x; 
-//         }
-//     }
-//     return result;
-// }
+function numberToThePow(x,y) {
+    let result = x;
+    if (x == 0) result = 1;
+    else{
+        for (let i = 1; i < y; i++) {
+        result *= x; 
+        }
+    }
+    return result;
+}
 // console.log(numberToThePow(0,3))
 
+
+// ------Function №3------
 // Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
 
-// function fixedName(name) {
-//     return  name[0].toUpperCase() + name.slice(1).toLowerCase();
-// }
+function fixedName(name) {
+    return  name[0].toUpperCase() + name.slice(1).toLowerCase();
+}
 // console.log(fixedName('vIkTORiA'))
 
+
+// ------Function №4------
 // Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 
-// function netSalary( salary, tax){
-//     return salary - (salary *(tax/100));
-// }
+function netSalary( salary, tax){
+    return salary - (salary *(tax/100));
+}
 // console.log(netSalary(1000, 19.5))
 
+
+// ------Function №5------
 // Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5
 
-// function getRandomArbitrary(n, m) {
-//     return Math.ceil(Math.random() * (m - n) + n) ;
-//   }
+function getRandomNumber(n, m) {
+    return Math.ceil(Math.random() * (m - n) + n) ;
+  }
+//   console.log(getRandomNumber(-100, 1000))
 
-//   console.log(getRandomArbitrary(-100, 1000))
 
+// ------Function №6------
 // Створити функцію, яка рахує скільки разів певна буква повторюється в слові. Приклад: countLetter("а", "Асталавіста") -> 4
 
+function countLetter(letter, word ){
+    let count = 0;
+    letter = letter.toLowerCase();
+    word = word.toLowerCase();
+    for (let i = 0; i < word.length; i++) {
+      if (word.charAt(i) === letter ) {
+          count++;
+      } 
+    }
+    return count;
+}
+// console.log(countLetter('O', 'CursOre one LOVE' ))
+
+
+
+// ------Function №7------
 // Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$
 // Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.
 
 // function convertCurrency(currency){
 
-
-
 // }
 
+
+
+// ------Function №8------
 // Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 
-// function getRandomPassword(Password = 8){
-//     let lengthPassword = "" ;
-//     for (i=1; i<=Password; i++) {
-//     lengthPassword += Math.trunc(Math.random()*10)
-//     }
-//     return lengthPassword
-// }
+function getRandomPassword(Password = 8){
+    let lengthPassword = "" ;
+    for (i=1; i<=Password; i++) {
+    lengthPassword += Math.trunc(Math.random()*10)
+    }
+    return lengthPassword
+}
 // console.log(getRandomPassword(2))
 
 
-
-
-
-
-
+// ------Function №9------
 // Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 
+// function deleteLetters(sentence, letter){
+//     sentence = sentence.slice();
 
+//   for (let letter of sentence){
+//       if (letter[i] == sentence){
 
-
-
-
-
-// Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
-
-// function isPalyndrom(expression){
-//  let reverseExpression = expression.split('').reverse().join('')
-
-//     // if (newExpression === reverseExpression) {
-//     //     return  true
-//     // }
-//     // else return false;
-
+//       }
+//   }
 
 // }
-//  let expression = 'лала лал';
-//  let expressionArray = expression.split('');
-//  let reverseExpression = expression.toLowerCase().split('').reverse().join('')
 
-// console.log(expressionArray)
+
+// ------Function №10------
+// Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад: isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу гусеня") -> true
+
+function isPalyndrom(expression){
+    let newExpression = expression.replace(/[\s.,%]/g, '').split('').join('').toLowerCase();
+    let reverseExpression = expression.replace(/[\s.,%]/g, '').split('').reverse().join('').toLowerCase();
+    if (newExpression == reverseExpression) {
+        return  true;
+    }
+    else return false;
+}
+// console.log(isPalyndrom("Я, н,е ,су гусеня"))
+
+
+// ------Function №11------
+// Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. Приклад: deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"
+
+
+
+document.writeln(`
+<li>Function №1: ${getMaxDigit(123456)}</li>
+<li>Function №2: ${numberToThePow(2,4)}</li>
+<li>Function №3: ${fixedName('vIkTORiA')}</li>
+<li>Function №4: ${netSalary(1000, 19.5)}</li>
+<li>Function №5: ${getRandomNumber(-100, 1000)}</li>
+<li>Function №6: ${countLetter('O', 'CursOre one LOVE <3' )} </li>
+
+<li>Function №7: ${numberToThePow(2,4)}</li>
+<li>Function №8: ${getRandomPassword(2)}</li>
+
+
+
+
+<li>Function №9: ${numberToThePow(2,4)}</li>
+<li>Function №10: ${isPalyndrom("Я, н%е ,су гусеня")}</li>
+<li>Function №11: ${numberToThePow(2,4)}</li>`
+)
