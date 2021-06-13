@@ -67,17 +67,6 @@ function countLetter(letter, word ){
 // console.log(countLetter('O', 'CursOre one LOVE' ))
 
 
-
-// ------Function №7------
-// Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500 грн. або convertCurrency("2500UAH") -> 100$
-// Врахуйте, інші валюти не конвертуються, потрібно виводити помилку, і також регістр uah не має значення.
-
-// function convertCurrency(currency){
-
-// }
-
-
-
 // ------Function №8------
 // Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
@@ -90,21 +79,6 @@ function getRandomPassword(Password = 8){
     return lengthPassword
 }
 // console.log(getRandomPassword(2))
-
-
-// ------Function №9------
-// Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
-
-// function deleteLetters(sentence, letter){
-//     sentence = sentence.slice();
-
-//   for (let letter of sentence){
-//       if (letter[i] == sentence){
-
-//       }
-//   }
-
-// }
 
 
 // ------Function №10------
@@ -121,10 +95,6 @@ function isPalyndrom(expression){
 // console.log(isPalyndrom("Я, н,е ,су гусеня"))
 
 
-// ------Function №11------
-// Створіть функцію, яка видалить з речення букви, які зустрічаються більше 1 разу. Приклад: deleteDuplicateLetter("Бісквіт був дуже ніжним") -> "сктдеим"
-
-
 
 document.writeln(`
 <li>Function №1: ${getMaxDigit(123456)}</li>
@@ -133,14 +103,6 @@ document.writeln(`
 <li>Function №4: ${netSalary(1000, 19.5)}</li>
 <li>Function №5: ${getRandomNumber(-100, 1000)}</li>
 <li>Function №6: ${countLetter('O', 'CursOre one LOVE <3' )} </li>
-
-<li>Function №7: ${numberToThePow(2,4)}</li>
 <li>Function №8: ${getRandomPassword(2)}</li>
-
-
-
-
-<li>Function №9: ${numberToThePow(2,4)}</li>
 <li>Function №10: ${isPalyndrom("Я, н%е ,су гусеня")}</li>
-<li>Function №11: ${numberToThePow(2,4)}</li>`
-)
+`)
