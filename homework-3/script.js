@@ -10,18 +10,19 @@ return Math.max(...number.toString().split('').map(Number))
 // ------Function №2------
 // Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
 
-function numberToThePow(x,y) {
-    let result = x;
-    if (x == 0) result = 1;
-    else{
-        for (let i = 1; i < y; i++) {
-        result *= x; 
+function numberToThePow(x, y) {
+    let result = 1;
+    if (y == 0) result = 1;
+     else {
+       for (let i = 1; i <=  Math.abs(y); i++) {
+           if (y > 0) result *= x; 
+          else if (y < 0) result = (1/x)* result; 
         }
     }
     return result;
 }
-// console.log(numberToThePow(0,3))
 
+// console.log(numberToThePow(2, -2))
 
 // ------Function №3------
 // Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
@@ -98,7 +99,7 @@ function isPalyndrom(expression){
 
 document.writeln(`
 <li>Function №1: ${getMaxDigit(123456)}</li>
-<li>Function №2: ${numberToThePow(2,4)}</li>
+<li>Function №2: ${numberToThePow(2,-2)}</li>
 <li>Function №3: ${fixedName('vIkTORiA')}</li>
 <li>Function №4: ${netSalary(1000, 19.5)}</li>
 <li>Function №5: ${getRandomNumber(-100, 1000)}</li>
