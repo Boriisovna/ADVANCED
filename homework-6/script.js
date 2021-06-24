@@ -83,11 +83,13 @@ console.log(getStudentInfo(students[1]))
 // Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
 function getStudentsNames(students) {
-    return students.map(studentName => studentName.name).sort()
+    return students.map(studentName => studentName.name[0].toUpperCase()+studentName.name.slice(1)).sort()
 }
 
 console.log(`Function 4:
 Імена студентів в алфавітному порядку - ${getStudentsNames(students)}`)
+
+
 
 // Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
