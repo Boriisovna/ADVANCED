@@ -85,7 +85,6 @@ console.log(getStudentInfo(students[1]))
 function getStudentsNames(students) {
     return students.map(studentName => studentName.name[0].toUpperCase()+studentName.name.slice(1)).sort()
 }
-
 console.log(`Function 4:
 Імена студентів в алфавітному порядку - ${getStudentsNames(students)}`)
 
