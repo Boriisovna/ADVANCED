@@ -36,7 +36,8 @@ function getSubjects(students) {
 
     return studentsSubjects
 }
-// console.log(getSubjects(students[0]))
+console.log(`Function 1:
+Список предметів для ${students[0].name} - ${getSubjects(students[0])} !`)
 
 
 // Створіть функцію getAverageMark(students[0]) --> 3.79 – яка поверне середню оцінку по усім предметам для переданого студента НЕ МАСИВА СТУДЕНТІВ. Оцінку округліть до 2ого знаку. Можна використовувати функції, написані у попередніх домашніх завданнях :)
@@ -52,9 +53,9 @@ function getAverageMark(students) {
     return averageMark
 }
 
-console.log(getAverageMark(students[0]))
-console.log(getAverageMark(students[1]))
-console.log(getAverageMark(students[2]))
+ console.log(`Function 2:
+ Cередня оцінка по усім предметам для ${students[2].name} - ${getAverageMark(students[2])}`)
+
 
 // Створіть функцію getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79} – яка повертає інформацію загального виду по переданому студенту (вам знадобиться функція з попереднього завдання). ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
 
@@ -75,8 +76,9 @@ function getStudentInfo(students) {
 
     return studentInfo
 }
-// console.log(getStudentInfo(students[2]))
-
+console.log(`Function 3:
+Загальна інформація про ${students[1].name} :`)
+console.log(getStudentInfo(students[1]))
 
 // Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
@@ -84,7 +86,8 @@ function getStudentsNames(students) {
     return students.map(studentName => studentName.name).sort()
 }
 
-// console.log(getStudentsNames(students))
+console.log(`Function 4:
+Імена студентів в алфавітному порядку - ${getStudentsNames(students)}`)
 
 // Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
@@ -92,7 +95,7 @@ function getBestStudent(students) {
 
     const arrayAverageMarks = [];
     let bestStudent = [];
-    
+
     students.forEach(student => {
         arrayAverageMarks.push(getAverageMark(student));
     });
@@ -108,11 +111,27 @@ function getBestStudent(students) {
     return bestStudent;
 }
 
-// console.log(getBestStudent(students));
+console.log(`Function 5:
+Кращий студент по показнику середньої оцінки - ${getBestStudent(students)}`);
 
 
 // Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
 
-function calculateWordLetters("тест"){
+function calculateWordLetters(word) {
+    const splitWord = word.toLowerCase().split('');
+    let count = {};
 
+    for (i = 0; i < splitWord.length; i++) {
+
+        if (count[splitWord[i]]) {
+            count[splitWord[i]] = count[splitWord[i]] += 1;
+        } else {
+            count[splitWord[i]] = 1;
+        }
+    };
+    return count;
 }
+
+console.log(`Function 6:
+Oб'єкт, в якому ключі це букви у слові ${'Viltoriia'}, а значення – кількість їх повторень`)
+console.log(calculateWordLetters('Viltoriia'))
