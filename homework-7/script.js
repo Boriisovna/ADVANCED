@@ -52,7 +52,7 @@ console.groupEnd()
 console.group(`function #4`)
 
 function getMySalary() {
-    setInterval(()=>{
+    setInterval(() => {
         const salary = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
         const taxes = this.tax;
         const profit = salary - taxes;
@@ -62,9 +62,9 @@ function getMySalary() {
             taxes: taxes,
             profit: profit
         }
-       return console.log(result);
-    }, 10000 )
-        
+        return console.log(result);
+    }, 10000)
+
 }
 
 getMySalary.call(ukraine)
