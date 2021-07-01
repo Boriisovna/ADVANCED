@@ -5,6 +5,7 @@ class Student {
         this.course = course;
         this.fullName = fullName;
         this.marks = marks;
+        this.dismiss = false;
     }
 
     getInfo() {
@@ -122,7 +123,7 @@ class BudgetStudent extends Student {
     };
 
     getScholarship() {
-        if ((this.getAverageMark() >= 4) && this.getDismiss()) {
+        if ((this.getAverageMark() >= 4) && !this.dismiss) {
             console.log('Ви отримали 1400 грн. стипендії')
         } else {
             console.log('Ви не отримаєте стипендії :(')
