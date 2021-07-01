@@ -5,26 +5,26 @@ class Student {
         this.course = course;
         this.fullName = fullName;
         this.marks = marks;
-        this.dismiss = false;
+        this.isDismissed = false;
     }
 
     getInfo() {
         console.log(`Студент ${this.course} ${this.university} ${this.fullName}`)
     }
     get getMarks() {
-        if (this.dismiss) {
+        if (this.isDismissed) {
             return null
         }
         return this.marks
     }
     set setMarks(mark) {
-        if (this.dismiss) {
+        if (this.isDismissed) {
             return null
         }
         return ostap.getMarks.push(mark)
     }
     getAverageMark() {
-        if (this.dismiss) {
+        if (this.isDismissed) {
             return null
         } else {
             let sum = 0;
@@ -38,11 +38,11 @@ class Student {
     }
 
     getDismiss() {
-        this.dismiss = true;
+        this.isDismissed = true;
     }
 
     getRecover() {
-        this.dismiss = false;
+        this.isDismissed = false;
     }
 
 }
@@ -123,7 +123,7 @@ class BudgetStudent extends Student {
     };
 
     getScholarship() {
-        if ((this.getAverageMark() >= 4) && !this.dismiss) {
+        if ((this.getAverageMark() >= 4) && !this.isDismissed) {
             console.log('Ви отримали 1400 грн. стипендії')
         } else {
             console.log('Ви не отримаєте стипендії :(')
