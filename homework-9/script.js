@@ -25,9 +25,9 @@ function generateBlocksInterval() {
       };
    }
 
-      setInterval(() => {
-         getRandomColorsForSquares()
-      }, 1000)
-   
+   setInterval(() => {
+      getRandomColorsForSquares()
+   }, 1000)
+
 }
 generateBlocksInterval()
