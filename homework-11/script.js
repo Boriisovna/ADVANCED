@@ -13,9 +13,9 @@ const getRandomChinese = async length => {
 
                 resolve(hieroglyphs)
             }, 50 * length)
-            i++;
-        });
 
+        });
+        i++;
 
         hieroglyphsString += await promise;
 
