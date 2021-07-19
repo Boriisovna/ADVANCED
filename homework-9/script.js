@@ -8,17 +8,18 @@ const generateBlocks = (num) => {
 }
 generateBlocks(25);
 
+const getRandomColor = () => {
+   let r = Math.trunc(Math.random() * 255)
+   let g = Math.trunc(Math.random() * 255)
+   let b = Math.trunc(Math.random() * 255)
+   return randomColor = `rgb(${r}, ${g}, ${b})`
+};
+
 
 function generateBlocksInterval() {
-   const getRandomColor = () => {
-      let r = Math.trunc(Math.random() * 255)
-      let g = Math.trunc(Math.random() * 255)
-      let b = Math.trunc(Math.random() * 255)
-      return randomColor = `rgb(${r}, ${g}, ${b})`
-   };
 
    const getRandomColorsForSquares = () => {
-      const squares = document.querySelectorAll('div')
+      const squares = document.querySelectorAll('.square')
 
       for (let square of squares) {
          square.style.backgroundColor = getRandomColor()
@@ -28,6 +29,7 @@ function generateBlocksInterval() {
    setInterval(() => {
       getRandomColorsForSquares()
    }, 1000)
-
 }
+
+
 generateBlocksInterval()
