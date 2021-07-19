@@ -11,18 +11,15 @@ class Student {
     getInfo() {
         console.log(`Студент ${this.course} ${this.university} ${this.fullName}`)
     }
+
     get getMarks() {
-        if (this.isDismissed) {
-            return null
-        }
-        return this.marks
+        return this.isDismissed ? null : this.marks
     }
+
     set setMarks(mark) {
-        if (this.isDismissed) {
-            return null
-        }
-        return ostap.getMarks.push(mark)
+        return this.isDismissed ? null : ostap.getMarks.push(mark)
     }
+
     getAverageMark() {
         if (this.isDismissed) {
             return null
@@ -34,7 +31,6 @@ class Student {
             });
             return sum / ostap.getMarks.length
         }
-
     }
 
     getDismiss() {
@@ -146,5 +142,3 @@ andrii.getScholarship()
 console.groupEnd()
 
 console.groupEnd()
-
-
