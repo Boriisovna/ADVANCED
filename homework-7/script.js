@@ -53,7 +53,9 @@ console.group(`function #4`)
 
 function getMySalary() {
     setInterval(() => {
-        const salary = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
+        const minSalary = 1500;
+        const maxSalary = 2000;
+        const salary = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
         const taxes = this.tax;
         const profit = salary - taxes;
 
