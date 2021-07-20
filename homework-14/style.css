@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgba(23, 61, 92, 0.719);
+}
+
+.container {
+    margin: 70px 200px;
+}
+
+.container_buttons {
+    margin: 0 30%;
+}
+
+.infinite_button {
+    margin-left: 50px;
+    margin-right: 10px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(178, 207, 241, 0.493);
+    color: rgba(14, 37, 56, 0.863);
+    font-size: 17px;
+    font-weight: 100;
+    font-weight: bolder;
+}
+
+button {
+    cursor: pointer;
+    border-color: rgb(22, 31, 70);
+    
+}
+
+button:hover {
+    background-color: rgba(73, 120, 175, 0.493);
+    transition: All 0.2s ease;
+}
+
+button:active{
+    box-shadow: 1px 4px 32px 6px rgba(197, 202, 204, 0.288);
+}
+
+.btn {
+    margin: 100px 25px;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(178, 207, 241, 0.493);
+    font-size: 17px;
+    font-weight: bolder;
+    color: rgba(14, 37, 56, 0.863);
+}
+
+.big_button,
+.small_buttons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    color: rgba(14, 37, 56, 0.863);
+}
+
+.small_buttons {
+width: 700px;
+}
+
+.output {
+    margin-left: 10px;
+   display: inline-block;
+}
+
+.output_number {
+    font-size: 20px;
+   
+}
+.arrow{
+    font-size: 25px;
+    font-weight: bolder;
+}
